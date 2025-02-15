@@ -34,7 +34,7 @@ export default function Footer() {
           {/* 1 in this we are  */}
           <div className="text-center">
             <div className="space-y-2 text-white ">
-              <h1 className="text-amber-200 text-left ">@ADi</h1>
+              <h1 className="text-amber-200 text-left ">CLICK</h1>
               <div className="text-center">
                 <h1 className="text-left"> <u> 
                   Address </u> : <p>Lorem ipsum dolor sit amet.</p>{" "}

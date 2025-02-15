@@ -1,0 +1,109 @@
+
+
+import React from 'react'
+
+const products = [
+
+    {
+      id: 1,
+      name: "Denim Jacket",
+      href: "#",
+      imageSrc:
+        "https://media.istockphoto.com/id/962940592/photo/skater-downtown.jpg?s=612x612&w=0&k=20&c=8MwHfIDkVuge4eM2EQ4bcLM1xyN-4JbVH99nK7jvG3E=",
+      imageAlt: "Front of men's Denim Jacket in blue.",
+      price: "₹8000",
+      // color: 'Blue',
+    },
+    {
+      id: 2,
+      name: "Running Shoes",
+      href: "#",
+      imageSrc:
+        "https://media.istockphoto.com/id/171370292/photo/nike-flyknit-trainer.jpg?s=612x612&w=0&k=20&c=j04paJYjHVFUgm7SBRY3GkIys2ogWssS9mkWl8OnLLE=",
+      imageAlt: "Pair of Running Shoes in red.",
+      price: "₹12000",
+      // color: 'White',
+    },
+    // {
+    //   id: 5,
+    //   name: 'Leather Belt',
+    //   href: '#',
+    //   imageSrc: 'https://media.istockphoto.com/id/184291696/photo/brown-leather-belt-isolated.jpg?s=612x612&w=0&k=20&c=gNsmlPpSZnC7Vx5F9VH8oSDVzWxfciQ5vbXMolelfhY=',
+    //   imageAlt: "Men's Leather Belt in brown.",
+    //   price: '₹25',
+    //   color: 'Brown',
+    // },
+    {
+      id: 3,
+      name: "Digital Watch",
+      href: "#",
+      imageSrc: "https://images.unsplash.com/photo-1523275335684-37898b6baf30",
+      imageAlt: "Men's Digital Watch in black.",
+      price: "₹1500",
+      // color: 'Black',
+    },
+    {
+      id: 4,
+      name: "Sports Cap",
+      href: "#",
+      imageSrc:
+        "https://media.istockphoto.com/id/1226418455/photo/its-hard-not-to-be-happy-playing-baseball.jpg?s=612x612&w=0&k=20&c=pid8lk5cT0UtwYD_DFXhfImVARGA1EphpM5KJAWG0tc=",
+      imageAlt: "Sports Cap ",
+      price: "₹2090",
+      // color: 'Navy Blue',
+    },
+  ];
+
+export const Category = () => {
+  return (
+    <>
+     {/* section 2 */}
+     <div className="pb-5 mb-5">
+        <div className="mx-auto max-w-2xl py-10 sm:px-6 sm:py-20 lg:max-w-7xl lg:px-8">
+          <h1 className="text-2xl font-bold tracking-tight text-gray-700 text-center pb-5 mb-5">
+            New Arrival
+          </h1>
+
+          <div className="mt-4">
+            <div className="mt-6 grid grid-cols-1 gap-x-6 gap-y-10 sm:grid-cols-2 lg:grid-cols-4 xl:gap-x-8">
+              {products.map((product) => (
+                <div
+                  key={product.id}
+                  className="group relative border border-gray-900"
+                >
+                  <img
+                    alt={product.imageAlt}
+                    src={product.imageSrc}
+                    className="aspect-square w-full  bg-gray-200 object-cover group-hover:opacity-75 lg:aspect-auto lg:h-80"
+                  />
+                  <div className="mt-4 flex justify-between">
+                    <div className="px-2 pb-3 ">
+                      <h3 className=" text-gray-700 text-xl font-bold">
+                        <a href={product.href}>
+                          <span
+                            aria-hidden="true"
+                            className="absolute inset-0 "
+                          />
+                          {product.name}
+                        </a>
+                      </h3>
+                      <p className="mt-1 text-sm text-gray-500">
+                        {product.color}
+                      </p>
+                    </div>
+                    <p className="text-l font-medium text-gray-900">
+                      {product.price}
+                    </p>
+                  </div>
+                </div>
+              ))}
+            </div>
+          </div>
+        </div>
+      </div>
+    
+    </>
+  )
+}
+
+ 
